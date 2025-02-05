@@ -1,18 +1,20 @@
+"use client";
 import About from "@/component/sections/AboutSection";
 import Gallery from "@/component/sections/GallerySection";
-import { AutoScrollGallery } from "@/component/sections/HeroSection";
+import HeroSection from "@/component/sections/HeroSection";
 import LocationSection from "@/component/sections/LocationSection";
 import Service from "@/component/sections/ServiceSection";
 import Testimonial from "@/component/sections/TestmonialSection";
 import Section from "@/component/ui/SectionWrapper";
-import Image from "next/image";
 import Head from "next/head";
+import '@fortawesome/fontawesome-free/css/all.min.css'; // Import Font Awesome styles
+
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Best Mehandi Artists in Tamil Nadu - Chennai, Coimbatore & Beyond</title>
+        <title>Chenni Mehandi Artist</title>
         <meta
           name="description"
           content="Book the best Mehandi artists across Tamil Nadu, including Chennai and Coimbatore, for weddings, baby showers, and more. Professional designs using 100% organic Mehandi with no side effects."
@@ -28,36 +30,39 @@ export default function Home() {
         {/* <meta property="og:url" content="https://yourwebsite.com" /> */}
         <meta property="og:type" content="website" />
       </Head>
-      <AutoScrollGallery />
+      <HeroSection />
       <About />
       <Service />
       <Gallery />
       <Section title="People love our work">
         <div className="flex flex-wrap justify-center gap-5">
-          <Testimonial
-            name="Meenakshi R."
-            feedback="The mehandi designs were intricate and beautifully detailed. The artist was professional and ensured the patterns were unique to my preferences. Highly recommend this service!"
-            image="https://via.placeholder.com/150"
-            rating={5}
-          />
-          <Testimonial
-            name="Janani S."
-            feedback="I loved the creativity and precision in the mehandi designs. The artist took the time to understand what I wanted and delivered beyond my expectations!"
-            image="https://via.placeholder.com/150"
-            rating={5}
-          />
-          <Testimonial
-            name="Lakshmi P."
-            feedback="The mehandi artistry was outstanding! The patterns were traditional yet modern, and the attention to detail was remarkable. I'll definitely come back for future events."
-            image="https://via.placeholder.com/150"
-            rating={5}
-          />
-          <Testimonial
-            name="Sowmya V."
-            feedback="The designs were stunning, and the quality of work was amazing! The artist was patient and very skilled. It was a wonderful experience overall."
-            image="https://via.placeholder.com/150"
-            rating={5}
-          />
+        <div className="flex flex-wrap justify-center gap-5">
+  <Testimonial
+    name="Anjali K."
+    feedback="The mehndi design was exactly what I envisioned for my wedding. The artist's skill and professionalism made the experience truly memorable!"
+    // image="https://via.placeholder.com/150"
+    rating={5}
+  />
+  <Testimonial
+    name="Priya D."
+    feedback="Amazing designs and exceptional attention to detail! My bridal mehndi turned out to be stunning, and everyone loved it. Highly recommended!"
+    // image="https://via.placeholder.com/150"
+    rating={5}
+  />
+  <Testimonial
+    name="Riya M."
+    feedback="The artist was punctual, creative, and very friendly. The mehndi was not just beautiful but also lasted long. Would definitely book again!"
+    // image="https://via.placeholder.com/150"
+    rating={5}
+  />
+  <Testimonial
+    name="Deepa N."
+    feedback="Beautiful designs and a very professional approach! The mehndi artist made sure every pattern was perfect. Absolutely loved it!"
+    // image="https://via.placeholder.com/150"
+    rating={5}
+  />
+</div>
+
 
         </div>
       </Section>
