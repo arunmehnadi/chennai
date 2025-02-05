@@ -44,10 +44,10 @@ export default function Navigation() {
             <div className="space-y-4 text-lg font-medium text-gray-800 ps-5">
               <Link href="/" className="block py-2 hover:text-henna-700 transition-colors">Home</Link>
               <Link href="/about" className="block py-2 hover:text-henna-700 transition-colors">About</Link>
-              <Link href="/services" className="block py-2 hover:text-henna-700 transition-colors">Services</Link>
-              <Link href="/gallery" className="block py-2 hover:text-henna-700 transition-colors">Gallery</Link>
-              <Link href="/testimonials" className="block py-2 hover:text-henna-700 transition-colors">Testimonials</Link>
-              <Link href="/contact" className="block py-2 hover:text-henna-700 transition-colors">Contact</Link>
+              <Link href="/mehandi-services" className="block py-2 hover:text-henna-700 transition-colors">Services</Link>
+              <Link href="/mehandi-design-gallery" className="block py-2 hover:text-henna-700 transition-colors">Gallery</Link>
+              <Link href="/client-feedback" className="block py-2 hover:text-henna-700 transition-colors">Testimonials</Link>
+              <Link href="/booknow" className="block py-2 hover:text-henna-700 transition-colors">Book now</Link>
             </div>
           </MobileMenu>
         </div>
