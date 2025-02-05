@@ -53,8 +53,8 @@ export default function ServicesPage() {
 
   return (
     <Section
-      title="Discover Our Mehndi Services"
-      description="Celebrate your special moments with our exquisite Mehndi designs. From traditional bridal patterns to modern artistic styles, we use 100% organic mehndi for a safe and stunning experience. Let us bring your vision to life."
+      title=" Chennai Mehndi services"
+      description=" At Chennai Mehndi Artist, we believe in providing exceptional personal care to ensure a memorable and satisfying experience for every client."
       classes="py-10"
     >
       {loading ? (
