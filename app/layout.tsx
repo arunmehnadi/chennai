@@ -1,23 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Navbar from "@/component/Navbar";
 import Footer from "@/component/Footer";
-
-// WhatsApp Button Component
-const WhatsAppButton: React.FC = () => {
-  return (
-    <a
-      href="https://wa.me/7417245847" // Replace with the phone number for WhatsApp
-      target="_blank"
-      rel="noopener noreferrer"
-      className="fixed bottom-5 right-5 flex justify-center items-center bg-[#25d366] text-white text-4xl p-4 rounded-full shadow-lg animate-pulse transition-all hover:bg-[#128c7e] focus:outline-none"
-      style={{ boxShadow: "0 0 0 0 rgba(37, 211, 102, 0.5)" }}
-    >
-      <img src="/assets/icon.png" width={32} alt="Whatsapp Icon" />
-    </a>
-  );
-};
+import Header from "@/component/Header";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -32,37 +17,36 @@ const geistMono = localFont({
 
 // Metadata Configuration
 export const metadata: Metadata = {
-  title: "Best Mehandi Artists in Tamil Nadu | Bridal, Arabic & Traditional Designs",
+  title: "Top Mehandi Artist in Chennai | Professional Mehandi Designs",
   description:
-    "We offer professional Mehandi services across Tamil Nadu, including Chennai and Coimbatore. Full bridal, Arabic, and traditional Mehandi designs at affordable prices. Book your appointment now!",
+    "Looking for the best Mehandi artist in Chennai? Book professional bridal, Arabic, and traditional Mehandi designs with our expert artists. Affordable rates and exceptional quality guaranteed.",
   openGraph: {
-    title: "Best Mehandi Artists in Tamil Nadu | Bridal, Arabic & Traditional Designs",
+    title: "Top Mehandi Artist in Chennai | Professional Mehandi Designs",
     description:
-      "Professional Mehandi services for bridal, Arabic, and traditional designs in Chennai, Coimbatore, and Tamil Nadu. Book your appointment today for exquisite Mehandi art.",
-    url: "https://bridalmehandiart.com", // Replace with your actual website URL
-    siteName: "Bridal Mehandi Art",
+      "Looking for the best Mehandi artist in Chennai? Book professional bridal, Arabic, and traditional Mehandi designs with our expert artists. Affordable rates and exceptional quality guaranteed.",
+    url: "https://chennai-mehandiartist.com", // Update with your actual website URL
+    siteName: "Chennai Mehandi Artist",
     images: [
       {
-        url: "https://bridalmehandiart.com/assets/bridal.jpg", // Replace with your image URL
+        url: "https://chennai-mehandiartist.com/assets/bridal-mehandi.jpg", // Replace with your image URL
         width: 1200,
         height: 630,
-        alt: "Bridal Mehandi Art - Bridal & Arabic Mehandi",
+        alt: "Chennai Mehandi Artist - Bridal & Arabic Mehandi",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    // site: "@yourhandle", // Optional: Replace with your Twitter handle
-    title: "Best Mehandi Artists in Tamil Nadu | Bridal, Arabic & Traditional Designs",
+    title: "Top Mehandi Artist in Chennai | Professional Mehandi Designs",
     description:
-      "Professional Mehandi services for bridal, Arabic, and traditional designs in Tamil Nadu. Home booking available for all events.",
+      "Book the top Mehandi artist in Chennai for beautiful bridal, Arabic, and traditional Mehandi designs. Get premium-quality service at affordable prices.",
   },
   robots: {
     index: true,
     follow: true,
   },
   keywords:
-    "Mehandi artists Tamil Nadu, professional Mehandi artists, bridal Mehandi Chennai, Arabic Mehandi Coimbatore, traditional Mehandi Tamil Nadu, home Mehandi booking, affordable Mehandi, Mehandi designs for weddings, bridal packages, baby shower Mehandi",
+    "Best Mehandi artist Chennai, professional Mehandi designs, bridal Mehandi Chennai, Arabic Mehandi Chennai, traditional Mehandi Chennai, affordable Mehandi Chennai, wedding Mehandi, baby shower Mehandi, Mehandi art Chennai",
 };
 
 export default function RootLayout({
@@ -92,43 +76,44 @@ export default function RootLayout({
         <link rel="manifest" href="/assets/site.webmanifest" />
         <meta name="theme-color" content="#ffffff" />
 
-
         <meta name="robots" content="index, follow" />
-        <meta name="keywords" content="Mehandi artists Tamil Nadu, professional Mehandi artists, bridal Mehandi Chennai, Arabic Mehandi Coimbatore, traditional Mehandi Tamil Nadu, home Mehandi booking" />
-        <meta name="author" content="Mehandi Creations" />
+        <meta name="keywords" content="Best Mehandi artist Chennai, bridal Mehandi Chennai, Arabic Mehandi Chennai, traditional Mehandi Chennai" />
+        <meta name="author" content="Chennai Mehandi Artist" />
         <meta name="language" content="English" />
-        <meta property="og:title" content="Best Mehandi Artists in Tamil Nadu | Bridal, Arabic & Traditional Designs" />
+        <meta property="og:title" content="Top Mehandi Artist in Chennai | Professional Mehandi Designs" />
         <meta
           property="og:description"
-          content="Book professional Mehandi artists in Tamil Nadu for bridal, Arabic, and traditional designs. Affordable prices, home booking services available, 24x7."
+          content="Looking for the best Mehandi artist in Chennai? Book professional bridal, Arabic, and traditional Mehandi designs with our expert artists. Affordable rates and exceptional quality guaranteed."
         />
-        <meta property="og:image" content="https://your-website.com/og-image.png" />
-        <meta property="og:url" content="https://your-website.com" />
+        <meta property="og:image" content="https://chennai-mehandiartist.com/assets/og-image.png" />
+        <meta property="og:url" content="https://chennai-mehandiartist.com" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Mehandi Creations" />
+        <meta property="og:site_name" content="Chennai Mehandi Artist" />
         <meta property="og:locale" content="en_US" />
         {/* Global Schema Markup */}
         <script type="application/ld+json">
           {`
             {
               "@context": "http://schema.org",
-              "@type": "Organization",
-              "name": "Bridal Mehandi Art"
-              "url": "https://bridalmehandiart.com",
-              "logo": "https://your-website.com/assets/logo.jpg",
+              "@type": "LocalBusiness",
+              "name": "Chennai Mehandi Artist",
+              "url": "https://chennai-mehandiartist.com",
+              "logo": "https://chennai-mehandiartist.com/assets/logo.jpg",
               "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+91-7417245847",
+                "telephone": "+91-7736789140",
                 "contactType": "Customer Service",
-                "areaServed": "IN",
+                "areaServed": "Chennai, IN",
                 "availableLanguage": "English"
               },
-              "sameAs": [
-                "https://www.instagram.com/milan_mehandi_nagercoil/profilecard/?igsh=aDNwNGI0eGR0MzRo",
-                "https://www.facebook.com/profile.php?id=61555385946575&mibextid=ZbWKwL",
-                "https://youtube.com/@akashnayak000?si=-LyzrUu90YPpSjrE
-              ],
-              "description": "Mehandi Creations offers professional bridal mehandi art services across Tamil Nadu with over 12 years of experience."
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Chennai",
+                "addressRegion": "Tamil Nadu",
+                "addressCountry": "IN"
+              },
+              "description": "Chennai Mehandi Artist offers professional Mehandi services for bridal, Arabic, and traditional designs in Chennai.",
+              "priceRange": "$$"
             }
           `}
         </script>
@@ -136,16 +121,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar />
+        <Header />
 
-        <div style={{ marginTop: '150px' }}>
+        <div>
           {children}
         </div>
 
         <Footer />
-
-        {/* Add the WhatsApp Button */}
-        <WhatsAppButton />
       </body>
     </html>
   );
