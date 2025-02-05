@@ -2,7 +2,7 @@ import React from "react";
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 
-export const mobile_number = "9510668439";
+export const mobile_number = "9103303886";
 
 export default function HeroSection() {
   return (
