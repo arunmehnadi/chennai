@@ -1,216 +1,84 @@
-"use client"
-import React, { useState } from 'react';
-import Image from 'next/image';
-import { Metadata } from 'next';
-import {
-  MapPin,
-  Award,
-  Users,
-  Calendar,
-  ChevronDown,
-  ChevronUp
-} from 'lucide-react';
-import Link from 'next/link';
-import Head from 'next/head';
-
-// Metadata for SEO
-const metadata = {
-  title: 'Priya\'s Henna Artistry - Exquisite Mehandi Designs',
-  description: 'Master mehandi artist with 12+ years of experience, 3000+ happy customers across India. Traditional and contemporary henna designs for weddings, festivals, and special occasions.',
-  keywords: [
-    'mehandi artist',
-    'henna design',
-    'bridal mehandi',
-    'traditional henna',
-    'wedding mehandi',
-    'cultural art'
-  ]
-};
-
-const locations = [
-  {
-    state: 'Maharashtra',
-    cities: ['Mumbai', 'Pune', 'Nagpur', 'Nashik']
-  },
-  {
-    state: 'Delhi NCR',
-    cities: ['New Delhi', 'Gurgaon', 'Noida', 'Faridabad']
-  },
-  {
-    state: 'Karnataka',
-    cities: ['Bangalore', 'Mysore', 'Hubli']
-  },
-  {
-    state: 'Gujarat',
-    cities: ['Ahmedabad', 'Surat', 'Vadodara']
-  }
-];
+"use client";
+import React from "react";
+import Image from "next/image";
+import { MapPin, Award, Users, Calendar } from "lucide-react";
+import Link from "next/link";
 
 const About: React.FC = () => {
-  const [openState, setOpenState] = useState<string | null>(null);
-
-  const toggleLocation = (state: string) => {
-    setOpenState(openState === state ? null : state);
-  };
-
   return (
-    <>
-      <Head>
-        <title>About Us - Professional Mehandi Artists Across Tamil Nadu</title>
-        <meta
-          name="description"
-          content="We are professional Mehandi artists with 12+ years of experience and over 8000 happy customers. Offering bridal, Arabic, and traditional designs across Tamil Nadu. Home booking available."
-        />
-        <meta
-          name="keywords"
-          content="Professional Mehandi artists, Tamil Nadu Mehandi, bridal Mehandi, Arabic Mehandi, traditional Mehandi, male Mehandi artist, home Mehandi booking, experienced Mehandi artist"
-        />
-        <meta name="author" content="Bridal Mehandi Art" />
-        <meta property="og:title" content="About Us - Professional Mehandi Artists Across Tamil Nadu" />
-        <meta
-          property="og:description"
-          content="With 12+ years of experience and 8000+ happy customers, we are your go-to Mehandi artists for bridal, Arabic, and traditional designs across Tamil Nadu. Home booking services available."
-        />
-        <meta property="og:image" content="/assets/profile.jpg" />
-        {/* <meta property="og:url" content="https://yourwebsite.com/about" /> */}
-        <meta property="og:type" content="website" />
-      </Head>
-      <div className="min-h-screen  py-12 px-4 md:px-12">
-        <div className="max-w-6xl mx-auto  rounded-2xl overflow-hidden">
-          {/* Hero Section */}
-          <div className="grid md:grid-cols-2 gap-8 p-8">
-            {/* Owner Image */}
-            <div className="flex items-center justify-center">
-              <div className="relative w-80 h-80 rounded-full overflow-hidden shadow-lg border-4 border-[#8B4513]">
-                <Image
-                  src="/assets/profile.jpeg"
-                  alt="Bridal Mehandi Art"
-                  layout="fill"
-                  objectFit="cover"
-                  className="transition-transform duration-300 hover:scale-110"
-                />
-              </div>
+    <div className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+      <img
+      src="https://images.unsplash.com/photo-1681519252175-d036319d3834?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="Background Image"
+        className="absolute inset-0 -z-10 size-full object-cover object-right md:object-center"
+      />
+      <div
+        className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
+        aria-hidden="true"
+      >
+        <div
+          className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"
+          style={{
+            clipPath:
+              "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+          }}
+        ></div>
+      </div>
+      <div
+        className="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu"
+        aria-hidden="true"
+      >
+        <div
+          className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"
+          style={{
+            clipPath:
+              "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+          }}
+        ></div>
+      </div>
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:mx-0">
+          <h2 className="text-5xl font-semibold tracking-tight text-white sm:text-7xl">
+            Chennai Mehndi Artist
+          </h2>
+          <p className="mt-8 text-lg font-medium text-gray-300 sm:text-xl">
+            Transforming traditions into breathtaking art, one henna design at a time.
+            With a passion spanning over a decade, I create intricate mehandi designs
+            that celebrate your unique journey.
+          </p>
+        </div>
+        <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
+        
+          <dl className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="flex flex-col-reverse gap-1">
+              <dt className="text-base/7 text-gray-300">Happy Customers</dt>
+              <dd className="text-4xl font-semibold tracking-tight text-white">8000+</dd>
             </div>
-
-            {/* Achievements & Introduction */}
-            <div className="space-y-6">
-              <h1 className="text-4xl font-serif text-[#8B4513] font-bold">
-                Bridal Mehandi Art
-              </h1>
-              <p className="text-gray-700 leading-relaxed">
-                Transforming traditions into breathtaking art, one henna design at a time.
-                With a passion that spans over a decade, I craft stories through intricate
-                mehandi designs that celebrate your unique journey.
-              </p>
-
-              {/* Achievement Highlights */}
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-[#FFF0E5] p-4 rounded-lg flex items-center space-x-3">
-                  <Users className="text-[#8B4513]" size={36} />
-                  <div>
-                    <h3 className="text-2xl font-bold text-[#8B4513]">8000+</h3>
-                    <p className="text-sm text-gray-600">Happy Customers</p>
-                  </div>
-                </div>
-                <div className="bg-[#FFF0E5] p-4 rounded-lg flex items-center space-x-3">
-                  <Calendar className="text-[#8B4513]" size={36} />
-                  <div>
-                    <h3 className="text-2xl font-bold text-[#8B4513]">12+</h3>
-                    <p className="text-sm text-gray-600">Years of Experience</p>
-                  </div>
-                </div>
-                <div className="bg-[#FFF0E5] p-4 rounded-lg flex items-center space-x-3">
-                  <Award className="text-[#8B4513]" size={36} />
-                  <div>
-                    <h3 className="text-2xl font-bold text-[#8B4513]">50+</h3>
-                    <p className="text-sm text-gray-600">Design Styles</p>
-                  </div>
-                </div>
-                <div className="bg-[#FFF0E5] p-4 rounded-lg flex items-center space-x-3">
-                  <MapPin className="text-[#8B4513]" size={36} />
-                  <div>
-                    <h3 className="text-2xl font-bold text-[#8B4513]">10+</h3>
-                    <p className="text-sm text-gray-600">Cities Covered</p>
-                  </div>
-                </div>
-              </div>
+            <div className="flex flex-col-reverse gap-1">
+              <dt className="text-base/7 text-gray-300">Years of Experience</dt>
+              <dd className="text-4xl font-semibold tracking-tight text-white">12+</dd>
             </div>
-          </div>
-
-          {/* Locations Accordion */}
-          <div className="p-8">
-            <h2 className="text-3xl font-serif text-[#8B4513] mb-6 text-center">
-              Our Service Locations
-            </h2>
-            <div className="space-y-4 max-w-3xl mx-auto">
-              {/* Tamil Nadu Accordion */}
-              <div className="border border-[#8B4513] rounded-lg overflow-hidden">
-                <div
-                  onClick={() => toggleLocation("Tamil Nadu")}
-                  className="flex justify-between items-center p-4 bg-white cursor-pointer hover:bg-[#FFF0E5] transition-colors"
-                >
-                  <span className="text-xl font-semibold text-[#8B4513]">
-                    Tamil Nadu
-                  </span>
-                  {openState === "Tamil Nadu" ? (
-                    <ChevronUp className="text-[#8B4513]" />
-                  ) : (
-                    <ChevronDown className="text-[#8B4513]" />
-                  )}
-                </div>
-                {openState === "Tamil Nadu" && (
-                  <div className="p-4 bg-[#FFF5E1]">
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
-                      {[
-                        "Chennai",
-                        "Kanchipuram",
-                        "Vellore",
-                        "Dharmapuri",
-                        "Salem",
-                        "Erode",
-                        "Coimbatore",
-                        "Tiruppur",
-                        "Pollachi",
-                        "Palani",
-                        "Dindigul",
-                        "Madurai",
-                        "Tuticorin",
-                        "Tirunelveli",
-                        "Nagercoil",
-                        "Kanyakumari",
-                        "Puducherry",
-                        "Villupuram",
-                        "Tiruchirappalli",
-                      ].map((city) => (
-                        <div
-                          key={city}
-                          className="bg-white p-2 rounded text-center text-[#8B4513]"
-                        >
-                          {city}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-              {/* Additional Accordions (if needed) */}
+            <div className="flex flex-col-reverse gap-1">
+              <dt className="text-base/7 text-gray-300">Design Styles</dt>
+              <dd className="text-4xl font-semibold tracking-tight text-white">50+</dd>
             </div>
-          </div>
-
-
-          {/* Call to Action */}
-          <div className="text-center p-8 ">
-            <Link
-              href="/booknow"
-              className="inline-block bg-[#8B4513] text-white px-8 py-4 rounded-full 
-            hover:bg-[#6B3E23] transition-colors duration-300 text-lg shadow-lg"
-            >
-              Book Your Mehandi Session
-            </Link>
-          </div>
+            <div className="flex flex-col-reverse gap-1">
+              <dt className="text-base/7 text-gray-300">Cities Covered</dt>
+              <dd className="text-4xl font-semibold tracking-tight text-white">10+</dd>
+            </div>
+          </dl>
         </div>
       </div>
-    </>
+      {/* Call to Action */}
+      <div className="text-center py-12">
+        <Link
+          href="/booknow"
+          className="inline-block bg-[#8B4513] text-white px-8 py-4 rounded-full text-lg shadow-lg transform transition-all duration-300 hover:bg-[#6B3E23] hover:scale-105"
+        >
+          Book Your Mehandi Session
+        </Link>
+      </div>
+    </div>
   );
 };
 
