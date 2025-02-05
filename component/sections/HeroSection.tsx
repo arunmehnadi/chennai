@@ -17,12 +17,13 @@ export default function HeroSection() {
       {/* Background Overlay */}
       <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-6">
         <h1 className="text-5xl md:text-7xl font-bold mb-4">
-          Welcome to My Website
+        Best Mehndi Artist in chennai
         </h1>
         <p className="text-xl md:text-2xl mb-6">
           {" "}
-          Exquisite Mehndi designs, crafted with love and precision for your
-          most cherished occasions.
+          Chennai Mehndi Artist is a name of value and designer in Mehandi with 12 years of experience. 
+          We are pioneer in figure work and best designs in the business with new and unqiue work with self-creation and collection of mixing
+
         </p>
         <div className="flex justify-center gap-6 pt-6">
           <Link href={"/booknow"}>
